@@ -1,0 +1,7 @@
+{
+    "name": "slava-vishnyakov/default-dict",
+    "description": "DefaultDict like in Python",
+    "require": {
+        "php": "^5.3.3 || ^7.0"
+    }
+}
