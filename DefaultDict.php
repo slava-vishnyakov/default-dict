@@ -1,8 +1,9 @@
 <?php
 
-namespace ChromeDevtoolsProtocol;
+namespace DefaultDict;
 
-class DefaultDict {
+class DefaultDict
+{
 
     private $defaultValue;
 
@@ -20,7 +21,7 @@ class DefaultDict {
 
     public function get($key)
     {
-        if(!$this->has($key)) {
+        if (!$this->has($key)) {
             $this->array[$key] = $this->defaultValue;
         }
         return $this->array[$key];
@@ -33,29 +34,29 @@ class DefaultDict {
 
     public function pushToKey($key, $value)
     {
-        $this->array[$key] []= $value;
+        $this->array[$key] [] = $value;
     }
 
-	public function shiftFirstFromKey($key)
-	{
-		return array_shift($this->array[$key]);
-	}
+    public function shiftFirstFromKey($key)
+    {
+        return array_shift($this->array[$key]);
+    }
 
-	public function decrement($key)
-	{
-		return $this->set($key, $this->get($key) - 1);
-	}
+    public function decrement($key)
+    {
+        return $this->set($key, $this->get($key) - 1);
+    }
 
-	public function set($key, $value)
-	{
-		$this->array[$key] = $value;
-		return $value;
-	}
+    public function set($key, $value)
+    {
+        $this->array[$key] = $value;
+        return $value;
+    }
 
-	public function countOfKey($key)
-	{
-		return count($this->array[$key]);
-	}
+    public function countOfKey($key)
+    {
+        return count($this->array[$key]);
+    }
 
 
 }
